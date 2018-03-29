@@ -1,7 +1,8 @@
 {
   "variables": {
-          "ami_id": "ami-7c412f13"
-          
+          "ami_id": "ami-7c412f13",
+          "aws_access_key": "",
+          "aws_secret_key": ""
 
 
   },
@@ -11,6 +12,8 @@
 
         "type": "amazon-ebs",
         "region": "eu-central-1",
+        "access_key": "{{user `aws_access_key`}}",
+        "secret_key": "{{user `aws_secret_key`}}",
         "source_ami": "{{user `ami_id`}}",
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu",
