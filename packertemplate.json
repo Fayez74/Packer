@@ -29,7 +29,14 @@
 
     }
 
-  ]
+  ],
+  "provisioners":[
+    {
+        "type": "shell",
+        "script": "install_ansible.sh"
+    }
+
+    ]
     
 
 
