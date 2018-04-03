@@ -33,7 +33,8 @@
   "provisioners":[
     {
         "type": "shell",
-        "script": "install_ansible.sh"
+        "inline": ["sudo apt-get install software-properties-common",
+        "sudo apt-add-repository ppa:ansible/ansible"]
     }
 
     ]
